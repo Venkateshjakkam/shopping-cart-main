@@ -11,13 +11,13 @@
 //   const dispatch = useDispatch();
 //   return (
 // 	<Modal>
-// 		<div className="cart">
+// 		<div className="cart"> 
 //         {.map((item) => {
 //           return (
 //             <div className="cartcad" key={item.id}>
 //               <div>
 //                 <img src={` ../images/${item.image}`} alt="cart" />
-//                 <h4>{item.name}</h4>
+//                  <h4>{item.name}</h4>
 //                 <p> price: Rs {item.price}</p>
 //                 <p>amount : Rs {item.price * item.quantity}</p>
 

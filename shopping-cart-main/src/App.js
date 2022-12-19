@@ -13,6 +13,6 @@ function App() {
       <Route exact patch="/payment" component={Payment}/>
     </Switch>
   );
-}
+}  
 
 export default App;

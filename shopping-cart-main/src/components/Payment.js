@@ -14,10 +14,10 @@ const Payment = () => {
 
 
   const cartItem = (acc,currentitem) => {
-    return acc + currentitem.quantity
+    return acc + currentitem.quantity 
   }
    const totalItem = cart.reduce(cartItem,0)
-   
+     
   
   return (
 	<div>

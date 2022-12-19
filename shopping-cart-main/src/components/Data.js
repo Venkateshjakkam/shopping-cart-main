@@ -10,9 +10,9 @@ export const Data = [
     id: 2,
     name: "iPhone 14",
     price: 54999,
-    image: "iphone.jpg",
+    image: "iphone.jpg", 
     discount: 12,
-  },
+  }, 
   {
     id: 3,
     image: "winter.jpg",

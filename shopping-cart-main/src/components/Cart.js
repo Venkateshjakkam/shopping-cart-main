@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 const Cart = () => {
+
   
   const cart = useSelector((state) => state);
   console.log(cart);
   const dispatch = useDispatch();
   const addition = (acc, currentvalue) => {
-    return acc + currentvalue.price * currentvalue.quantity;
+    return acc + ((currentvalue.price-(currentvalue.price *0.01*currentvalue.discount))* currentvalue.quantity);
   };
   const total = cart.reduce(addition, 0);
 
@@ -21,10 +22,10 @@ const Cart = () => {
       <Link to="/products">
         <TiArrowBack />
       </Link>
-     
+               
       <div className="cart">
         {cart.map((item) => {
-          return (
+          return (     
             <div className="cartcad" key={item.id}>
               <div>
                 <img src={` ../images/${item.image}`} alt="cart" />

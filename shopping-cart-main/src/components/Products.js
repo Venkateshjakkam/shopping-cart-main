@@ -15,7 +15,7 @@ const Products = () => {
    const totalItem = cart.reduce(cartItem,0)
   console.log(cart);
   const dispatch = useDispatch();
-
+ 
 
   return (
     <div>
@@ -25,16 +25,15 @@ const Products = () => {
 				<li><a href="/Electronics">Electronics</a></li>
 				<li><a href="/Clothes">Clothes</a></li>
 				<li><a href="/Contact">Contact</a></li>
+        <h1 style={{color:'rgb(233, 233, 233)'}}>S STORE</h1>
 			</ul>
+    
 		
     <div className="productConatiner">
 
       <div className="navigation">
-        <p>
-          <HiOutlineMenuAlt4 />
-        </p>
-        <Link to="/cart">
         
+        <Link to="/cart">
           {totalItem}
           <GiShoppingBag ></GiShoppingBag>
         </Link>
@@ -61,4 +60,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Products;  
