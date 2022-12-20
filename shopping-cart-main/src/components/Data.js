@@ -3,7 +3,7 @@ export const Data = [
     id: 1,
     image: "guitar.jpg",
     name: "Guitar",
-    price: 450,
+    price: 11450,
     discount: 10,
   },
   {
