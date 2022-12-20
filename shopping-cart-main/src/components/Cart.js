@@ -14,8 +14,8 @@ const Cart = () => {
   };
   const total = cart.reduce(addition, 0);
 
-  const openModalWithItem = (currentitem) => {
-    currentitem=true
+  const openModalWithItem = (currentvalue) => {
+    currentvalue.item=true
   }
   return (
     <div className="cartcontainer">
@@ -33,18 +33,10 @@ const Cart = () => {
                 <p> price: Rs {item.price}</p>
                 <p>amount : Rs {(item.price-(item.price*0.01*item.discount ))* item.quantity}</p>
 
-                <button
-                  onClick={() => dispatch({ type: "REMOVE", payload: item })}
-                >
-                  remove
-                </button>
+                <button onClick={() => dispatch({ type: "REMOVE", payload: item })}> Remove</button>
               </div>
               <div>
-                <button
-                  onClick={() => dispatch({ type: "INCREASE", payload: item })}
-                >
-                  +
-                </button>
+                <button  onClick={() => dispatch({ type: "INCREASE", payload: item })}>+</button>
                 <p>{item.quantity}</p>
                 <button
                   onClick={() => {
@@ -53,10 +45,7 @@ const Cart = () => {
                     } else {
                       dispatch({ type: "REMOVE", payload: item });
                     }
-                  }}
-                >
-                  -
-                </button>
+                  }}>-</button>
               </div>
             </div>
            
@@ -65,8 +54,8 @@ const Cart = () => {
       </div>
       
       {total > 0 && <h2>total:{total}</h2>}
-      <Link to='/payment'>
-     <button   onClick={() => {openModalWithItem()}} style={{backgroundColor:'green', width:'225px', height:'25px',borderRadius:'25px'}}> Check out</button>
+      <Link to='/Popup'>
+     <button   style={{backgroundColor:'green', width:'225px', height:'25px',borderRadius:'25px'}}> Check out</button>
      </Link>
     </div>
   );

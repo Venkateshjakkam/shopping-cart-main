@@ -1,7 +1,6 @@
 import React from "react";
 import { Data } from "./Data";
 import { GiShoppingBag } from "react-icons/gi";
-import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -22,7 +21,7 @@ const Products = () => {
       <div className="nav">
 			<ul>
 				<li><a class="active" href="/Home">Home</a></li>
-				<li><a href="/Electronics">Electronics</a></li>
+				<li><a href="Electronics">Electronics</a></li>
 				<li><a href="/Clothes">Clothes</a></li>
 				<li><a href="/Contact">Contact</a></li>
         <h1 style={{color:'rgb(233, 233, 233)'}}>S STORE</h1>
